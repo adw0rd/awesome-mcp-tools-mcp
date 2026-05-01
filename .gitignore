@@ -4,3 +4,8 @@
 .idea/
 .vscode/
 node_modules/
+
+# Internal dev docs — not for the public repo (account hygiene, publish flow,
+# bridge architecture notes). Keep locally; sync via the private project's docs.
+CLAUDE.md
+
