@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "awesome-mcp-tools": {
+      "type": "streamableHttp",
+      "url": "https://awesome-mcp.tools/mcp",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "awesome-mcp",
+  "version": "0.2.0",
+  "description": "CLI to search the awesome-mcp.tools catalog of 2,000+ MCP servers, plus a stdio bridge for using the hosted MCP server from any client.",
+  "bin": {
+    "awesome-mcp": "bin/awesome-mcp.js",
+    "awesome-mcp-bridge": "bin/awesome-mcp-bridge.js"
+  },
+  "files": [
+    "bin/awesome-mcp.js",
+    "bin/awesome-mcp-bridge.js",
+    "lib.js",
+    "examples/",
+    "server-card.json",
+    "tools.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cli",
+    "claude",
+    "cursor",
+    "codex",
+    "search",
+    "directory",
+    "catalog"
+  ],
+  "license": "MIT",
+  "author": "Mikhail Andreev (adw0rd)",
+  "homepage": "https://awesome-mcp.tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adw0rd/awesome-mcp-tools-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adw0rd/awesome-mcp-tools-mcp/issues"
+  }
+}

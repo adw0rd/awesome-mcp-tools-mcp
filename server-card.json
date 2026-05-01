@@ -1,0 +1,15 @@
+{
+  "serverInfo": {
+    "name": "awesome-mcp.tools",
+    "version": "1.0.0"
+  },
+  "description": "Directory of MCP servers with full-text search, trending, and side-by-side comparison — exposed as an MCP server.",
+  "transport": {
+    "type": "streamableHttp",
+    "url": "https://awesome-mcp.tools/mcp"
+  },
+  "capabilities": {
+    "tools": {}
+  },
+  "_note": "Snapshot of https://awesome-mcp.tools/.well-known/mcp/server-card.json — fetch the live URL for the authoritative version."
+}

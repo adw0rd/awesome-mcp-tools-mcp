@@ -1,0 +1,83 @@
+{
+  "_note": "Snapshot of `tools/list` from https://awesome-mcp.tools/mcp — fetch the live endpoint for the authoritative version. Server-card metadata lives in server-card.json.",
+  "_fetched_at": "2026-05-01",
+  "_source": "https://awesome-mcp.tools/mcp",
+  "tools": [
+    {
+      "name": "search_servers",
+      "description": "Search MCP servers in the awesome-mcp.tools catalog. Supports full-text query and filters by category, language, tag, license, source. Sort by stars (default), trending (24h growth), or hot (featured).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q":        { "type": "string", "description": "full-text query" },
+          "category": { "type": "string", "description": "category filter (comma-separated for OR)" },
+          "language": { "type": "string", "description": "language filter (comma-separated for OR)" },
+          "tag":      { "type": "string", "description": "tag filter (comma-separated for OR)" },
+          "license":  { "type": "string", "description": "license filter (comma-separated for OR)" },
+          "source":   { "type": "string", "description": "data source: github, mcp.so, mcpservers.com, glama, neuraldeep" },
+          "sort":     { "type": "string", "description": "sort: empty (stars), trending (24h growth), hot (featured)" },
+          "limit":    { "type": "integer", "description": "max results (default 20, max 100)" },
+          "page":     { "type": "integer", "description": "page number (default 1)" }
+        }
+      }
+    },
+    {
+      "name": "get_server",
+      "description": "Get full details (metadata + README) of a single MCP server by its slug.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slug": { "type": "string", "description": "server slug, e.g. 'microsoft-playwright-mcp'" }
+        },
+        "required": ["slug"]
+      }
+    },
+    {
+      "name": "compare_servers",
+      "description": "Compare two MCP servers side-by-side.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "slugA": { "type": "string", "description": "first server slug (required)" },
+          "slugB": { "type": "string", "description": "second server slug (required)" }
+        },
+        "required": ["slugA", "slugB"]
+      }
+    },
+    {
+      "name": "list_categories",
+      "description": "List all MCP server categories with server counts.",
+      "inputSchema": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "list_languages",
+      "description": "List programming languages of MCP servers with counts.",
+      "inputSchema": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "list_tags",
+      "description": "List all MCP server tags with counts.",
+      "inputSchema": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "list_trending",
+      "description": "Top MCP servers by 24h star growth.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": { "type": "integer", "description": "max results (default 20)" }
+        }
+      }
+    },
+    {
+      "name": "list_hot",
+      "description": "Featured/hot MCP servers.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": { "type": "integer", "description": "max results (default 20)" }
+        }
+      }
+    }
+  ]
+}
