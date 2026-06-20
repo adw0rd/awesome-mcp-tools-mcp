@@ -1,0 +1,8 @@
+.git
+node_modules
+examples
+test
+*.md
+.idea
+.vscode
+.DS_Store
